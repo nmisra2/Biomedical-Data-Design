@@ -1,8 +1,6 @@
 from munkres import Munkres
 import numpy as np
 
-__all__ = ['assign_doctors']
-
 #function to assign doctors to hospital based on preference
 def assign_doctors(ranks, capacities):
     """

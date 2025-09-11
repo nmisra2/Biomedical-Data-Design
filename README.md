@@ -54,6 +54,7 @@ We decided to use the Munkres algorithm since it finds the minimum-cost assignme
 Harold W. Kuhn (1955). The Hungarian Method for the Assignment Problem. Naval Research Logistics Quarterly, 2(1–2), 83–97.
 
 ### Munkres explained
+https://www.hungarianalgorithm.com/hungarianalgorithm.php
 https://brilliant.org/wiki/hungarian-matching/
 
 ### Munkres package documentation

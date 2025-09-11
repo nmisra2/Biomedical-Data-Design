@@ -87,3 +87,11 @@ def test_extract_assignments1():
     assignments = _extract_assignments(indexes, slot_to_hospital, n_doctors)
     expected_assignments = [1, 0, 2]
     assert assignments == expected_assignments
+
+def test_min_cost1():
+    ranks = [[1, 2, 3], [3, 2, 1], [1, 3, 2]]
+    capacities = [1, 1, 1]
+    expected_cost = 4
+    assignments = assign_doctors(ranks, capacities)
+    actual_cost = sum(ranks[i][assignments[i]] for i in range(len(assignments)) if assignments[i] != -1)
+    assert actual_cost == expected_cost

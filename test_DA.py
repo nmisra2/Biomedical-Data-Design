@@ -99,6 +99,7 @@ def test_extract_assignments1():
     expected_assignments = [1, 0, 2]
     assert assignments == expected_assignments
 
+# Test for assign_doctors produces the minimum total cost assignment
 def test_min_cost1():
     ranks = [[1, 2, 3], [3, 2, 1], [1, 3, 2]]
     capacities = [1, 1, 1]

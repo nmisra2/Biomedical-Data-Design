@@ -44,17 +44,20 @@ The Munkres library in Python was used to compute the assignments.
 The algorithm produces a list of doctors matched with hospitals as well as doctors that did not have a match (unmatched).
 
 Munkres Explained
-- how it breaks ties
-- how it runs
-It is an algorithm based on the Hungarian algorithm that focuses on finding the minimum cost for assignemnts using a bipartite graph. This bipartite graph can be represented by a matrix with the first column and first row as the entries
+
+It is an algorithm based on the Hungarian algorithm that finds the minimum-cost assignment on a bipartite graph, represented as a cost matrix where rows are one partition (e.g., doctors), columns the other (e.g., hospitals), and each cell is the assignment cost. When multiple equal-cost matchings (ties) exist, the algorithm still returns one optimal assignment. The assignment that is given depends on the internal implementation details (e.g., the order in which rows/columns are processed, how augmenting paths are picked, or the order of scanning for zeros in the cost matrix). In our case, based on the source code, the algorithm scans rows top to bottom and columnns left to right. Once it finds the first feasible zero it stars it and breaks the loop. If multiple zeros are available, the lowest-indexed row gets served first, and within that row the lowest-indexed column is chosen. This is the primary tie-breaker. When multiple equally optimal matchings exist, such as in the case of the doctors ranking all the hospitals the same, it consistently favors assignments involving lower-indexed rows and columns.
+
 
 
 ## RESOURCES USED:
 ### Hungarian algorithm original paper
 Harold W. Kuhn (1955). The Hungarian Method for the Assignment Problem. Naval Research Logistics Quarterly, 2(1–2), 83–97.
 
-### Reference code
-https://software.clapper.org/munkres/
-
 ### Munkres explained
 https://brilliant.org/wiki/hungarian-matching/
+
+### Munkres package documentation
+https://software.clapper.org/munkres/
+
+### Munkres package source code
+https://github.com/bmc/munkres/blob/master/munkres.py

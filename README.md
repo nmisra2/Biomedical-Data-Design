@@ -8,7 +8,7 @@
 
 ## CONTRIBUTIONS:
 * Naina - Conducted research, helped develop code for Hungarian algorithm, developed the code to output which doctors are matched to each hospital, edited code, wrote introduction
-* Rex - Conducted research, helped develop code handling input and printing output
+* Rex - Conducted research, helped develop code handling input and printing output, modularized functions, and wrote unit tests.
 * Phoebe - Conducted research and found resources, helped brainstorm assignment system, commented code, wrote Algorithm Implemented
 
 
